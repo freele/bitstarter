@@ -24,7 +24,7 @@ References:
 var fs = require('fs');
 var program = require('commander');
 var cheerio = require('cheerio');
-var HTMLFILE_DEFAULT = "index.html";
+var HTMLFILE_DEFAULT = "index1.html";
 var CHECKSFILE_DEFAULT = "checks.json";
 
 var assertFileExists = function(infile) {
@@ -33,6 +33,15 @@ var assertFileExists = function(infile) {
         console.log("%s does not exist. Exiting.", instr);
         process.exit(1); // http://nodejs.org/api/process.html#process_process_exit_code
     }
+    return instr;
+};
+
+var NoAssertHack = function(infile) {
+    var instr = infile.toString();
+  /*  if(!fs.existsSync(instr)) {
+        console.log("%s does not exist. Exiting.", instr);
+        process.exit(1); // http://nodejs.org/api/process.html#process_process_exit_code                                   
+    }*/
     return instr;
 };
 
@@ -61,6 +70,7 @@ var clone = function(fn) {
     return fn.bind({});
 };
 
+/*
 if(require.main == module) {
     program
         .option('-c, --checks <check_file>', 'Path to checks.json', clone(assertFileExists), CHECKSFILE_DEFAULT)
@@ -72,3 +82,47 @@ if(require.main == module) {
 } else {
     exports.checkHtmlFile = checkHtmlFile;
 }
+*/
+var url = 'http://ancient-anchorage-1969.herokuapp.com/';
+url = null; 
+
+if(require.main == module) {                                                                                              
+    program                                                                                                                        .option('-c, --checks <check_file>', 'Path to checks.json', clone(assertFileExists), CHECKSFILE_DEFAULT)                  .option('-f, --file <html_file>', 'Path to index.html', clone(assertFileExists), HTMLFILE_DEFAULT)               
+
+	.option('-u, --url <url_file>', 'url to index.html', clone(NoAssertHack), HTMLFILE_DEFAULT) 
+        .parse(process.argv);  
+    url = program.url;
+                                                                                                 
+} else {                                                                                                                       exports.checkHtmlFile = checkHtmlFile;                                                                                 }  
+
+var rest = require('restler');
+var webpage_fetch = function(response, status) {
+   console.log(response);
+
+if(require.main == module) {
+
+    var file = response;
+   var checkJson = checkHtmlFile(file, program.checks);
+ var outJson = JSON.stringify(checkJson, null, 4);   
+   console.log(outJson);
+}else{
+   exports.checkHtmlFile = checkHtmlFile; 
+}
+}
+
+rest.get(url).on('complete', webpage_fetch);
+console.log("This will print while the webpage being fetched unless the URL fetch is finished already.");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
