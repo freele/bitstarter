@@ -46,7 +46,7 @@ var NoAssertHack = function(infile) {
 };
 
 var cheerioHtmlFile = function(htmlfile) {
-    return cheerio.load(fs.readFileSync(htmlfile));
+    return cheerio.load(/*fs.readFileSync(*/htmlfile/*)*/);
 };
 
 var loadChecks = function(checksfile) {
@@ -97,7 +97,7 @@ if(require.main == module) {
 
 var rest = require('restler');
 var webpage_fetch = function(response, status) {
-   console.log(response);
+//   console.log(response);
 
 if(require.main == module) {
 
@@ -111,7 +111,7 @@ if(require.main == module) {
 }
 
 rest.get(url).on('complete', webpage_fetch);
-console.log("This will print while the webpage being fetched unless the URL fetch is finished already.");
+//console.log("This will print while the webpage being fetched unless the URL fetch is finished already.");
 
 
 
