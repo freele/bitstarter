@@ -4,6 +4,9 @@ var app = express.createServer(express.logger());
 
 var fs = require('fs');
 
+app.use("/bootstrap", express.static(__dirname + '/bootstrap'));
+app.use("", express.static(__dirname + ''));
+
 app.get('/', function(request, response) {
   response.send(fs.readFileSync('index.html').toString());
 });
