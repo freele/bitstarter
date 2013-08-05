@@ -6,6 +6,8 @@
 body {
   padding-bottom: 40px;
   color: #5a5a5a;
+
+  background: grey;
 }
 
 
@@ -38,7 +40,7 @@ body {
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 3500px;
+  height: 3000px;
 }
 /*
 .carousel img {
@@ -51,6 +53,55 @@ body {
 */
 
 
+.carousel-indicators {
+  height: 40px;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  z-index: 15;
+  width: 960px;
+  padding-left: 0;
+  margin-left: -480px;
+  text-align: center;
+  list-style: none;
+}
+
+.carousel-indicators li {
+  display: inline-block;
+  width: 310px;
+  height: 40px;
+  margin: 0px;
+  text-indent: 0px;
+  cursor: pointer;
+  border: none;
+  border-radius: 0px;
+}
+
+.carousel-indicators .active {
+  width: 310px;
+  height: 40px;
+  margin: 0;
+  border-radius: 0px;
+  background-color: #ffffff;
+}
+
+.carousel-caption {
+  position: absolute;
+  right: 15%;
+  bottom: 20px;
+  left: 15%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.carousel-caption .btn {
+  text-shadow: none;
+}
+
 /* MARKETING CONTENT
 -------------------------------------------------- */
 
@@ -58,6 +109,19 @@ body {
 .marketing {
   padding-left: 15px;
   padding-right: 15px;
+}
+
+
+/* Main manu styles */
+.main-menu .col-lg-4 {
+  padding: 0px;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 /* Center align the text within the three columns below the carousel */
