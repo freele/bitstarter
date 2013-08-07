@@ -13,10 +13,29 @@
 
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-43038579-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
   </head>
+
+
 <!-- NAVBAR
 ================================================== -->
   <body>
+
+
     <div class="navbar-wrapper">
       <div class="container">
 
@@ -37,8 +56,8 @@
        <!-- Three columns of text below the carousel -->
             <div class="container main-menu">
               <ol class="carousel-indicators row">
-                <li data-target="#myCarousel" data-slide-to="0" id = "col1" class="col-lg-4">Welcome</li>
-                <li data-target="#myCarousel" data-slide-to="1" id = "col2" class="col-lg-4 active">MapAround</li>
+                <li data-target="#myCarousel" data-slide-to="1" id = "col1" class="col-lg-4">Welcome</li>
+                <li data-target="#myCarousel" data-slide-to="0" id = "col2" class="col-lg-4 active">MapAround</li>
                 <li data-target="#myCarousel" data-slide-to="2" id = "col3" class="col-lg-4">Bitstarter</li>
               </ol>
             </div>
@@ -60,7 +79,7 @@
         <div class="col-lg-4">
           <img class="img-circle" data-src="holder.js/140x140">
           <h2>Heading</h2>
-          <p>Social page</p>
+          <p>Project page</p>
           <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
 
@@ -94,12 +113,22 @@
       <div class="featurette">
         <img class="featurette-image img-circle pull-right" data-src="holder.js/512x512">
         <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-        <p class="lead">Product page</p>
+        <p class="lead">Social page</p>
       </div>
 
-      <hr class="featurette-divider">
+      <div class="span8 offset2 social">
+        <!-- AddThis Button BEGIN -->
+        <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+        <a class="addthis_button_preferred_1"></a>
+        <a class="addthis_button_preferred_2"></a>
+        <a class="addthis_button_compact"></a>
+        <a class="addthis_counter addthis_bubble_style"></a>
+        </div>
+        <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-520298a93f505d86"></script>
+        <!-- AddThis Button END -->
+      </div>
 
-      <!-- /END THE FEATURETTES -->
 
 
       <!-- FOOTER -->
@@ -160,5 +189,17 @@
     <script src="bootstrap/assets/js/jquery.js"></script>
     <script src="bootstrap/dist/js/bootstrap.js"></script>
     <script src="bootstrap/assets/js/holder.js"></script>
+
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-43038579-1', 'maparound.io');
+    ga('send', 'pageview');
+
+  </script>
   </body>
 </html>
