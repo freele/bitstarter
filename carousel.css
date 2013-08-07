@@ -40,7 +40,7 @@ body {
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 3000px;
+  height: 900px;
 }
 /*
 .carousel img {
@@ -77,12 +77,30 @@ body {
   border-radius: 0px;
 }
 
+#col1{
+  background: #62da9a;
+  }
+#col1 .active{
+  background: #62da9a;
+  }
+#col2{
+  background: #ff6b40;
+  }
+#col2 .active{
+  background: #ff6b40;
+  }
+#col3{
+  background: #aaf53d;
+  }
+#col3 .active{
+  background: #aaf53d;
+  }
+
 .carousel-indicators .active {
   width: 310px;
   height: 40px;
   margin: 0;
   border-radius: 0px;
-  background-color: #ffffff;
 }
 
 .carousel-caption {
