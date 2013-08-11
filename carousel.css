@@ -6,8 +6,6 @@
 body {
   padding-bottom: 40px;
   color: #5a5a5a;
-
-  background: grey;
 }
 
 
@@ -26,13 +24,6 @@ body {
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
-/* Carousel base class */
-.carousel {
-  margin-bottom: 60px;
-
-  /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
-  margin-top: -90px;
-}
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   z-index: 10;
@@ -53,28 +44,27 @@ body {
 */
 
 
-.carousel-indicators {
+.carousel-indicators, .carousel-indicators .active {
   height: 40px;
-  position: absolute;
+  position: relative;
   top: 0px;
-  left: 50%;
+  left: 0;
   z-index: 15;
-  width: 960px;
-  padding-left: 0;
-  margin-left: -480px;
-  text-align: center;
-  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
-
-.carousel-indicators li {
-  display: inline-block;
-  width: 310px;
+.carousel-indicators li, .carousel-indicators li.active {
+  width: 33.333%;
   height: 40px;
   margin: 0px;
   text-indent: 0px;
   cursor: pointer;
   border: none;
   border-radius: 0px;
+
+  text-align: left;
+  vertical-align: bottom;
 }
 
 #col1{
@@ -96,12 +86,7 @@ body {
   background: #aaf53d;
   }
 
-.carousel-indicators .active {
-  width: 310px;
-  height: 40px;
-  margin: 0;
-  border-radius: 0px;
-}
+
 
 .carousel-caption {
   position: absolute;
@@ -215,4 +200,12 @@ body {
     line-height: 1.4;
   }
 
+}
+
+
+
+@media (min-width: 0px) {
+.col-4
+ {
+  float: left;
 }

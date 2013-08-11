@@ -999,7 +999,7 @@ pre code {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 92px) {
   .container {
     max-width: 940px;
   }
