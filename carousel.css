@@ -30,7 +30,7 @@ h6,
 .h5,
 .h6 {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.1;
 }
 
@@ -132,7 +132,13 @@ h6,
   padding-top: 20px;
   padding-bottom: 20px;
   text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  text-shadow: none;
+}
+.carousel-caption {
+  text-align: left;
+}
+.carousel-caption h3 {
+  padding-left: 5%;
 }
 
 .carousel-caption .btn {
@@ -151,8 +157,13 @@ h6,
 
 /* Main manu styles */
 .main-menu .col-lg-4, .main-menu .col-lg-4.active {
-  padding: 12pt 0 0 0;
+  padding: 13pt 0 0 0;
   text-indent: 7pt;
+}
+
+.container .main-menu
+{
+  padding: 0px;
 }
 
 .main-menu-caption {
@@ -167,29 +178,18 @@ h6,
   vertical-align: bottom;
 }
 
-}
-.marketing h2 {
-  font-weight: normal;
-}
-.marketing .col-lg-4 p {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
 /* Center align the text within the three columns below the carousel */
 .marketing .col-lg-4 {
   text-align: center;
   margin-bottom: 20px;
 }
-.marketing h2 {
-  font-weight: normal;
-}
+
 .marketing .col-lg-4 p {
   margin-left: 10px;
   margin-right: 10px;
 }
 
-.ma_footer
+.ma-footer
 {
   height: 50px;
   margin-top: -50px;
@@ -227,10 +227,22 @@ h6,
 /*PROJECT PAGE*/
 .main-logo
 {
-  padding: 25pt 10pt 0pt 20pt;
+  padding: 25pt 10pt 25pt 20pt;
   width: 200pt;
 }
 
+.ma-logo-header
+{
+  padding: 40pt 0pt 0pt 20pt;
+  margin-bottom: 0px;
+  text-align: left;
+}
+.ma-logo-add
+{
+  font-size: 10pt;
+  text-align: right;
+  padding-right: 10px;
+}
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
