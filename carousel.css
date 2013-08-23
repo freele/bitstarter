@@ -157,8 +157,8 @@ h6,
 
 /* Main manu styles */
 .main-menu .col-lg-4, .main-menu .col-lg-4.active {
-  padding: 13pt 0 0 0;
-  text-indent: 7pt;
+  padding: 15px 0 0 0;
+  text-indent: 8px;
 }
 
 .container .main-menu
@@ -173,8 +173,8 @@ h6,
 
   color: white;
   font-weight: 400;
-  font-size: 15pt;
-  line-height: 15pt;
+  font-size: 21px;
+  line-height: 21px;
   vertical-align: bottom;
 }
 
