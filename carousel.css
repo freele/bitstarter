@@ -63,7 +63,7 @@ h6,
 .carousel .item {
   height: 100%;
   overflow: hidden;
-  padding-bottom: 50px;
+  padding-bottom: 130px;
 }
 /*
 .carousel img {
@@ -191,11 +191,37 @@ h6,
 
 .ma-footer
 {
-  height: 70px;
-  margin: -70px 0px 0px 0px;
-  padding-top: 20px;
+  height: 130px;
+  margin: -130px 0px 0px 0px;
+  padding-top: 15px;
   max-width: 100%;
   background: #6b6b6b;
+}
+
+.ma-but-text{
+  float: left;
+}
+.ma-social{
+}
+
+
+.ma-bs-button{
+  padding-top: 10px;
+}
+.ma-bs-tier{
+  font-size: 18px;
+  font-weight: 700;
+}
+.ma-bs-descr{
+}
+
+.ma-bs h3 {
+  padding-left: 0;
+}
+
+/* AddThis customiztions */
+.addthis_toolbox{
+  padding: 0 auto 0 auto; 
 }
 
 /* Featurettes
